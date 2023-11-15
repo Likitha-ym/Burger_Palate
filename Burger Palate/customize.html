@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customize Your Burger</title>
+    <style>
+        /* Center the website title and add unique styling */
+        .website-title {
+            text-align: center;
+            background-color: #ff9900;
+            color: #1e4099;
+            padding: 10px;
+            font-size: 36px;
+            font-family: 'Pacifico', cursive;
+        }
+
+        .ingredient-label {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .ingredient-label img {
+            width: 200px;
+            height: 200px;
+            margin-right: 10px;
+        }
+
+        .ingredient-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        body {
+            background-color: rgba(174, 240, 240, 0.5);
+        }
+        
+        .delete-button {
+            color: red;
+            cursor: pointer;
+        }
+
+        .ingredient-cost {
+            float: right;
+        }
+
+        .add-button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        .checkout-button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="website-title">Burger Palate</h1>
+    </header>
+    <main>
+        <section id="burgerCustomization">
+            <h2>Customize Your Burger</h2>
+            <div id="burgerOptions">
+                <!-- Display available burger ingredients here -->
+                <div class="ingredient-row">
+                    <label class="ingredient-label">
+                        <img src="images/bun.jpg" alt="Bun">
+                        Bun
+                        <span class="ingredient-cost">$20.00</span>
+                        <button class="add-button" data-ingredient="Bun">Add</button>
+                    </label>
+                    <label class="ingredient-label">
+                        <img src="images/beef.jpg" alt="Beef Patty">
+                        Beef Patty
+                        <span class="ingredient-cost">$50.00</span>
+                        <button class="add-button" data-ingredient="Beef Patty">Add</button>
+                    </label>
+                    <label class="ingredient-label">
+                        <img src="images/cheese.jpg" alt="Cheese">
+                        Cheese
+                        <span class="ingredient-cost">$20.00</span>
+                        <button class="add-button" data-ingredient="Cheese">Add</button>
+                    </label>
+                    <label class="ingredient-label">
+                        <img src="images/let.jpg" alt="Lettuce">
+                        Lettuce
+                        <span class="ingredient-cost">$30.00</span>
+                        <button class="add-button" data-ingredient="Lettuce">Add</button>
+                    </label>
+                </div>
+
+                <div class="ingredient-row">
+                    <label class="ingredient-label">
+                        <img src="images/tom.jpg" alt="Tomato">
+                        Tomato
+                        <span class="ingredient-cost">$10.00</span>
+                        <button class="add-button" data-ingredient="Tomato">Add</button>
+                    </label>
+                    <label class="ingredient-label">
+                        <img src="images/on.jpg" alt="Onion">
+                        Onion
+                        <span class="ingredient-cost">$10.00</span>
+                        <button class="add-button" data-ingredient="Onion">Add</button>
+                    </label>
+                    <label class="ingredient-label">
+                        <img src="images/pic.jpg" alt="Pickles">
+                        Pickles
+                        <span class="ingredient-cost">$15.00</span>
+                        <button class="add-button" data-ingredient="Pickles">Add</button>
+                    </label>
+                    <label class="ingredient-label">
+                        <img src="images/bac.jpg" alt="Bacon">
+                        Bacon
+                        <span class="ingredient-cost">$25.00</span>
+                        <button class="add-button" data-ingredient="Bacon">Add</button>
+                    </label>
+                </div>
+                <div class="ingredient-row">
+                    <label class="ingredient-label">
+                        <img src="images/may.jpg" alt="Mayonnaise">
+                        Mayonnaise
+                        <span class="ingredient-cost">$15.00</span>
+                        <button class="add-button" data-ingredient="Mayonnaise">Add</button>
+                    </label>
+                    <label class="ingredient-label">
+                        <img src="images/ket.jpg" alt="Ketchup">
+                        Ketchup
+                        <span class="ingredient-cost">$5.00</span>
+                        <button class="add-button" data-ingredient="Ketchup">Add</button>
+                    </label>
+                    <label class="ingredient-label">
+                        <img src="images/must.jpg" alt="Mustard">
+                        Mustard
+                        <span class="ingredient-cost">$10.00</span>
+                        <button class="add-button" data-ingredient="Mustard">Add</button>
+                    </label>
+                    <label class="ingredient-label">
+                        <img src="images/mush.jpg" alt="Mushrooms">
+                        Mushrooms
+                        <span class="ingredient-cost">$20.00</span>
+                        <button class="add-button" data-ingredient="Mushrooms">Add</button>
+                    </label>
+                </div>
+                <div class="ingredient-row">
+                    <label class="ingredient-label">
+                        <img src="images/avocado.jpg" alt="Avocado">
+                        Avocado
+                        <span class="ingredient-cost">$40.00</span>
+                        <button class="add-button" data-ingredient="Avocado">Add</button>
+                    </label>
+                    
+                    <label class="ingredient-label">
+                        <img src="images/coleslaw.jpg" alt="Coleslaw">
+                        Coleslaw
+                        <span class="ingredient-cost">$15.00</span>
+                        <button class="add-button" data-ingredient="Coleslaw">Add</button>
+                    </label>
+                    
+                    <label class="ingredient-label">
+                        <img src="images/fried-onions.jpg" alt="Fried Onions">
+                        Fried Onions
+                        <span class="ingredient-cost">$20.00</span>
+                        <button class="add-button" data-ingredient="Fried Onions">Add</button>
+                    </label>
+                    
+                    <label class="ingredient-label">
+                        <img src="images/fried-egg.jpg" alt="Fried Egg">
+                        Fried Egg
+                        <span class="ingredient-cost">$30.00</span>
+                        <button class="add-button" data-ingredient="Fried Egg">Add</button>
+                    </label>
+                </div>
+            
+                <div class="ingredient-row">
+                    <label class="ingredient-label">
+                        <img src="images/pineapple.jpg" alt="Pineapple">
+                        Pineapple
+                        <span class="ingredient-cost">$25.00</span>
+                        <button class="add-button" data-ingredient="Pineapple">Add</button>
+                    </label>
+                    
+                    <label class="ingredient-label">
+                        <img src="images/jalapenos.jpg" alt="Jalapenos">
+                        Jalapenos
+                        <span class ="ingredient-cost">$15.00</span>
+                        <button class="add-button" data-ingredient="Jalapenos">Add</button>
+                    </label>
+                    
+                    <label class="ingredient-label">
+                        <img src="images/blue-cheese.jpg" alt="Blue Cheese">
+                        Blue Cheese
+                        <span class="ingredient-cost">$30.00</span>
+                        <button class="add-button" data-ingredient="Blue Cheese">Add</button>
+                    </label>
+                    
+                    <label class="ingredient-label">
+                        <img src="images/sriracha.jpg" alt="Sriracha">
+                        Sriracha
+                        <span class="ingredient-cost">$10.00</span>
+                        <button class="add-button" data-ingredient="Sriracha">Add</button>
+                    </label>
+                </div>
+                <!-- Add even more ingredients here -->
+            </div>
+            
+            <div id="userBurger">
+                <h3>Your Burger</h3>
+                <ul id="selectedIngredients">
+                    <!-- Display selected ingredients here -->
+                </ul>
+                <p data-total-cost>Total Cost: <span id="totalCost">$0.00</span></p>
+                <button class="checkout-button" onclick="goToCheckoutPage()">Checkout</button>
+            </div>
+        </section>
+    </main>
+    <script>
+        const addButtonElements = document.querySelectorAll('.add-button');
+        const selectedIngredientsList = document.getElementById('selectedIngredients');
+        const totalCostElement = document.getElementById('totalCost');
+        const selectedIngredients = [];
+
+        addButtonElements.forEach(addButton => {
+            addButton.addEventListener('click', () => {
+                const ingredientName = addButton.getAttribute('data-ingredient');
+                const ingredientCost = parseFloat(addButton.parentElement.querySelector('.ingredient-cost').textContent.replace('$', ''));
+
+                const ingredient = { name: ingredientName, cost: ingredientCost };
+                selectedIngredients.push(ingredient);
+
+                const li = document.createElement('li');
+                li.innerHTML = `${ingredient.name} <span class="delete-button" onclick="deleteFromBurger(this)">Delete</span> <span class="ingredient-cost">$${ingredient.cost.toFixed(2)}</span>`;
+                selectedIngredientsList.appendChild(li);
+
+                updateTotalCost();
+            });
+        });
+
+        function deleteFromBurger(element) {
+            const index = Array.from(element.parentElement.parentElement.children).indexOf(element.parentElement);
+            selectedIngredients.splice(index, 1);
+            element.parentElement.remove();
+            updateTotalCost();
+        }
+
+        function updateTotalCost() {
+            const totalCost = selectedIngredients.reduce((total, ingredient) => total + ingredient.cost, 0);
+            totalCostElement.textContent = `$${totalCost.toFixed(2)}`;
+        }
+
+        function goToCheckoutPage() {
+            localStorage.setItem('selectedIngredients', JSON.stringify(selectedIngredients));
+            localStorage.setItem('totalCost', totalCostElement.textContent);
+            window.location.href = 'checkout.html';
+        }
+    </script>
+</body>
+</html>

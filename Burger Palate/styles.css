@@ -1,0 +1,64 @@
+/* Reset some default margin and padding */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set a background color and text color for the whole page */
+body {
+    font-family: Arial, sans-serif;
+    color: #0a0c0c;
+    background-color: rgba(226, 212, 212, 0.5);
+    background-image: url('images/home.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+
+/* Style the header */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+/* Main content layout */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
+/* Style the front page section */
+#frontPage {
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+/* Style the "Start Customizing" button */
+.custom-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff9800;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.custom-button:hover {
+    background-color: #f57c00;
+}
